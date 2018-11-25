@@ -25,7 +25,7 @@ module.exports = {
 		Which one you use is ultimately up to you.
 	*/
 	serveFilesWithNode: false,
-	domain: 'https://lolisafe.moe',
+	domain: 'https://i-collect.loli-hentai.moe',
 
 	// Port on which to run the server
 	port: 9999,
@@ -53,6 +53,10 @@ module.exports = {
 		'.bash_profile',
 		'.bashrc',
 		'.profile'
+		'.htm'
+		'.html'
+		'.php'
+		'.phtml'
 	],
 
 	// Uploads config
