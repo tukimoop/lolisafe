@@ -1,4 +1,4 @@
-![loli-safe](https://a.safe.moe/jcutlz.png)
+![lolisafe](public/images/fb_share.png)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/kanadeko/Kuro/master/LICENSE)
 [![Chat / Support](https://img.shields.io/badge/Chat%20%2F%20Support-discord-7289DA.svg?style=flat-square)](https://discord.gg/5g6vgwn)
 
@@ -9,7 +9,7 @@
 - Album downloads (Thanks to [PascalTemel](https://github.com/PascalTemel))
 - See releases for changelog
 
-If you're upgrading from a version prior to v3.0.0 make sure to run **ONCE** `node database/migration.js` to create the missing columns on the database.
+If you're upgrading from a version prior to v3.0.0 make sure to run `node database/migration.js` **ONCE** to create the missing columns on the database.
 
 ## Running
 1. Ensure you have at least version 7.6.0 of node installed
@@ -39,10 +39,13 @@ Which one you use is ultimately up to you. Either way, I've provided a sample co
 
 If you set `enableUserAccounts: true`, people will be able to create accounts on the service to keep track of their uploaded files and create albums to upload stuff to, pretty much like imgur does, but only through the API. Every user account has a token that the user can use to upload stuff through the API. You can find this token on the section called `Change your token` on the administration dashboard, and if it gets leaked or compromised you can renew it by clicking the button titled `Request new token`.
 
-## Using loli-safe
-Once the service starts you can start hitting the upload endpoint at `/api/upload` with any file. If you're using the frontend to do so then you are pretty much set, but if using the API to upload make sure the form name is set to `files[]` and the form type to `multipart/form-data`. If the service is running in private mode, dont forget to send a header of type `token: YOUR-CLIENT-TOKEN` to validate the request.
+## Cloudflare Support
+If you are running lolisafe behind Cloudflare there is support to make the NGINX logs have the user's IP instead of Cloudflare's IP. You will need to compile NGINX from source with `--with-http_realip_module` as well as uncomment the following line in the NGINX config: `include /path/to/lolisafe/real-ip-from-cf;`
 
-A sample of the returning json from the endpoint can be seen below:
+## Using lolisafe
+Once the service starts you can start hitting the upload endpoint at `/api/upload` with any file. If you're using the frontend to do so then you are pretty much set, but if you're using the API to upload make sure the form name is set to `files[]` and the form type to `multipart/form-data`. If the service is running in private mode, don't forget to send a header of type `token: YOUR-CLIENT-TOKEN` to validate the request.
+
+A sample of the JSON returned from the endpoint can be seen below:
 ```json
 {
 	"name": "EW7C.png",
@@ -51,20 +54,30 @@ A sample of the returning json from the endpoint can be seen below:
 }
 ```
 
-To make it easier and better than any other service, you can download [our Chrome extension](https://chrome.google.com/webstore/detail/loli-safe-uploader/enkkmplljfjppcdaancckgilmgoiofnj) that will let you configure your hostname and tokens, so that you can simply `right click` -> `send to loli-safe` to any image/audio/video file on the web.
+To make it easier and better than any other service, you can download [our Chrome extension](https://chrome.google.com/webstore/detail/lolisafe-uploader/enkkmplljfjppcdaancckgilmgoiofnj). That will let you configure your hostname and tokens, so that you can simply `right click` ->  `loli-safe` -> `send to safe` on any image/audio/video file on the web.
 
-Because of how nodejs apps work, if you want it attached to a domain name you will need to make a reverse proxy for it. Here is a tutorial [on how to do this with nginx](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04). Keep in mind that this is only a requirement if you want to access your loli-safe service by using a domain name (ex: https://i.kanacchi.moe), otherwise you can use the service just fine by accessing it from your server's IP.
+Because of how nodejs apps work, if you want it attached to a domain name you will need to make a reverse proxy for it. Here is a tutorial [on how to do this with nginx](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04). Keep in mind that this is only a requirement if you want to access your lolisafe service by using a domain name, otherwise you can use the service just fine by accessing it from your server's IP.
 
-## Sites using loli-safe
+## Sites using lolisafe
 - [lolisafe.moe](https://lolisafe.moe): A small safe worth protecting.
-- [safe.moe](https://safe.moe): The world's most ~~un~~safe pomf clone
-- [updx.xyz](http://updx.xyz): A shitty clone. ~~At least the files are more secure!~~
 - [safe.fiery.me](https://safe.fiery.me): Just another clone.
+- [kayo.moe](https://kayo.moe): File hosting for all~
+- [dmca.gripe](https://dmca.gripe): a dmca-resistant, permanent file hosting service.
+- [safe.succmy.wang](https://safe.succmy.wang): A private clone with a ~~funny~~ bad name
+- [namir.in](https://namir.in): A private clone dedicated to best girl.
+- [safe.waliant.pw](https://safe.waliant.pw): A generic private clone for personal use.
+- [wtf.hyper.lol](https://wtf.hyper.lol): My personal clone with some ~~terrible~~ great changes.
+- [discordjs.moe](https://discordjs.moe): A まじ卍 as fuck copy of lolisafe.moe
+- [i.liich.me](https://i.liich.me): Another private clone with a different look.
+- [discordimages.com](https://discordimages.com): A file hosting service that is available for public use.
+- [uwu.ninja](https://uwu.ninja): UwU'ish your uploads with us, now. plz.
+- [criminals.host](https://criminals.host): Redesigned, offshore by AZATEJ.
+- [vortex.64i.de](https://vortex.64i.de/): ShareX/WeebShit place for the 64i.de team and interested ones.
 - Feel free to add yours here.
 
 ## Author
 
-**lolisafe** © [Pitu](https://github.com/Pitu), Released under the [MIT](https://github.com/WeebDev/loli-safe/blob/master/LICENSE) License.<br>
+**lolisafe** © [Pitu](https://github.com/Pitu), Released under the [MIT](https://github.com/WeebDev/lolisafe/blob/master/LICENSE) License.<br>
 Authored and maintained by Pitu.
 
 > [lolisafe.moe](https://lolisafe.moe) · GitHub [@Pitu](https://github.com/Pitu)

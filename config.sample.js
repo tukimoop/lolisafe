@@ -3,7 +3,7 @@ module.exports = {
 	/*
 		If set to true the user will need to specify the auto-generated token
 		on each API call, meaning random strangers wont be able to use the service
-		unless they have the token loli-safe provides you with.
+		unless they have the token lolisafe provides you with.
 		If it's set to false, then upload will be public for anyone to use.
 	*/
 	private: true,
@@ -35,11 +35,24 @@ module.exports = {
 
 	// Add file extensions here which should be blocked
 	blockedExtensions: [
+		'.jar',
 		'.exe',
+		'.exec',
+		'.msi',
+		'.com',
 		'.bat',
 		'.cmd',
-		'.msi',
-		'.sh'
+		'.nt',
+		'.scr',
+		'.ps1',
+		'.psm1',
+		'.sh',
+		'.bash',
+		'.bsh',
+		'.csh',
+		'.bash_profile',
+		'.bashrc',
+		'.profile'
 	],
 
 	// Uploads config
@@ -56,6 +69,13 @@ module.exports = {
 
 		// The length of the random generated name for the uploaded files
 		fileLength: 32,
+
+		/*
+			This option will limit how many times it will try to generate random names
+			for uploaded files. If this value is higher than 1, it will help in cases
+			where files with the same name already exists (higher chance with shorter file name length).
+		*/
+		maxTries: 1,
 
 		/*
 			NOTE: Thumbnails are only for the admin panel and they require you
