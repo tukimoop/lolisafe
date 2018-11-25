@@ -2,6 +2,11 @@
 		HOME
 ------------------ */
 
+section#home #mainbody {
+	background-color: #1b1f22;
+	background-image: linear-gradient((to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("https://loli-hentai.moe/images/overlay.png");
+}
+
 section#home #b {
 	-webkit-animation-delay: 0.5s;
 	animation-delay: 0.5s;
@@ -41,7 +46,9 @@ section#home div#dropzone {
     padding-left: .75em;
     padding-right: .75em;
     text-align: center;
-    cursor: pointer;   
+    cursor: pointer;
+	background-image:
+		linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5));
 }
 
 section#home div#uploads, section#home p#tokenContainer, section#home a#panel { display: none; }
