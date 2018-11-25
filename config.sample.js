@@ -52,10 +52,10 @@ module.exports = {
 		'.csh',
 		'.bash_profile',
 		'.bashrc',
-		'.profile'
-		'.htm'
-		'.html'
-		'.php'
+		'.profile',
+		'.htm',
+		'.html',
+		'.php',
 		'.phtml'
 	],
 
