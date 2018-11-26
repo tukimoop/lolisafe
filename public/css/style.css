@@ -2,12 +2,12 @@
 		HOME
 ------------------ */
 
-section#home #mainbody {
+section#home div.hero-body {
 	background-color: #1b1f22;
 	background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("https://loli-hentai.moe/images/overlay.png");
 }
 
-section#home h1#title, section#home h2#subtitle, section#home strong {
+section#home h1.title, section#home h2.subtitle, section#home strong, section#home article.message {
 	color: #fff
 }
 
