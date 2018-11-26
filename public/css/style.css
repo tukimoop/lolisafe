@@ -7,7 +7,7 @@ section#home div.hero-body {
 	background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("https://loli-hentai.moe/images/overlay.png");
 }
 
-section#home h1.title, section#home h2.subtitle, section#home strong {
+section#home strong, h1.title, h2.subtitle, a {
 	color: #fff;
 }
 
@@ -87,6 +87,20 @@ section#home div#uploads { margin-bottom: 25px; }
 }
 
 /* ------------------
+		FAQ
+------------------ */
+
+article.message {
+  background-color:#2C2F33;
+}
+
+article.message div.message-body {
+  color: #f9f9f9;
+  border: 1px solid #4a4a4a;
+}
+
+
+/* ------------------
 		PANEL
 ------------------ */
 
@@ -122,4 +136,15 @@ section#dashboard div#table div.column a img { width:200px; }
 .select-wrapper {
 	text-align: center;
 	margin-bottom: 10px;
+}
+
+/*
+ override white background
+*/
+.fa-events-icons-ready {
+	background-color: #23282b;
+}
+
+section#dashboard {
+	background-color: #23282b;
 }
