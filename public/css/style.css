@@ -2,8 +2,8 @@
 		GLOBAL
 ------------------ */
 
-strong, h1.title, h2.subtitle, a {
-	color: #fff;
+strong, h1.title, h2.subtitle, h3.subtitle, .menu-list a {
+	color: #fff !important;
 }
 
 /* ------------------
@@ -135,11 +135,19 @@ section#auth input, section#auth a {
     box-shadow: 0 0 0;
 }
 
-section#dashboard .table { font-size: 12px }
+section#dashboard .table { font-size: 12px; }
 section#dashboard div#table div.column { display:flex; width: 200px; height: 220px; margin: 9px; background: #f9f9f9; overflow: hidden; flex-wrap: wrap; align-items: center; }
 section#dashboard div#table div.column a { width: 100%; }
 section#dashboard div#table div.column a:first-child { height: 180px; }
 section#dashboard div#table div.column a img { width:200px; }
+
+section#dashboard .menu-label { color: #878787; }
+/*section#dashboard div#page*/
+
+section#dashboard table.table, section#dashboard .table thead th {
+	color: #a0a0a0;
+  background-color: inherit;
+}
 
 .select-wrapper {
 	text-align: center;
