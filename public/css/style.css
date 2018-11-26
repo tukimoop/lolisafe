@@ -7,8 +7,8 @@ section#home div.hero-body {
 	background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("https://loli-hentai.moe/images/overlay.png");
 }
 
-section#home h1.title, section#home h2.subtitle, section#home strong, section#home article.message {
-	color: #fff
+section#home h1.title, section#home h2.subtitle, section#home strong {
+	color: #fff;
 }
 
 section#home #b {
