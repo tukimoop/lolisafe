@@ -149,6 +149,14 @@ section#dashboard table.table, section#dashboard .table thead th {
   background-color: inherit;
 }
 
+section#dashboard table th {
+	color: inherit;
+}
+
+ul.menulist:hover, ul.menulist li a {
+		color: #00d1b2;
+}
+
 .select-wrapper {
 	text-align: center;
 	margin-bottom: 10px;
