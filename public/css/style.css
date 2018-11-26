@@ -1,14 +1,18 @@
 /* ------------------
+		GLOBAL
+------------------ */
+
+strong, h1.title, h2.subtitle, h3.subtitle, .menu-list a {
+	color: #fff !important;
+}
+
+/* ------------------
 		HOME
 ------------------ */
 
-section#home #mainbody {
+section#home div.hero-body {
 	background-color: #1b1f22;
 	background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("https://loli-hentai.moe/images/overlay.png");
-}
-
-section#home h1#title, section#home h2#subtitle, section#home strong {
-	color: #fff
 }
 
 section#home #b {
@@ -30,6 +34,7 @@ section#home #b {
 	vertical-align: top;
 	width: 240px;
 	box-shadow: 0 20px 60px rgba(10, 10, 10, 0.05), 0 5px 10px rgba(10, 10, 10, 0.1), 0 1px 1px rgba(10, 10, 10, 0.2);
+	background-color: #2C2F33;
 }
 
 section#home div#dropzone {
@@ -86,6 +91,20 @@ section#home div#uploads { margin-bottom: 25px; }
 }
 
 /* ------------------
+		FAQ
+------------------ */
+
+article.message {
+  background-color:#2C2F33;
+}
+
+article.message div.message-body {
+  color: #f9f9f9;
+  border: 1px solid #4a4a4a;
+}
+
+
+/* ------------------
 		PANEL
 ------------------ */
 
@@ -97,7 +116,11 @@ section#login input, section#login p.control a.button {
     box-shadow: 0 0 0;
 }
 
-section#login p.control a.button { margin-left: 10px; }
+section#login p.control a.button {
+	margin-left: 10px;
+	background-color: #2C2F33;
+	color: #f9f9f9
+}
 section#login p.control a#loginBtn { border-right: 0px; }
 section#login p.control a#registerBtn { border-left: 0px; }
 
@@ -112,13 +135,40 @@ section#auth input, section#auth a {
     box-shadow: 0 0 0;
 }
 
-section#dashboard .table { font-size: 12px }
+section#dashboard .table { font-size: 12px; }
 section#dashboard div#table div.column { display:flex; width: 200px; height: 220px; margin: 9px; background: #f9f9f9; overflow: hidden; flex-wrap: wrap; align-items: center; }
 section#dashboard div#table div.column a { width: 100%; }
 section#dashboard div#table div.column a:first-child { height: 180px; }
 section#dashboard div#table div.column a img { width:200px; }
 
+section#dashboard .menu-label { color: #878787; }
+/*section#dashboard div#page*/
+
+section#dashboard table.table, section#dashboard .table thead th {
+	color: #a0a0a0;
+  background-color: inherit;
+}
+
+section#dashboard table th {
+	color: inherit;
+}
+
 .select-wrapper {
 	text-align: center;
 	margin-bottom: 10px;
+}
+
+/*
+ override white background
+*/
+.fa-events-icons-ready {
+	background-color: #23282b;
+}
+
+section#dashboard {
+	background-color: #23282b;
+}
+
+section#login {
+	background-color: inherit;
 }
